@@ -199,12 +199,12 @@ function openP(id){const p=PRODUCTS.find(x=>x.id==id),sim=PRODUCTS.filter(x=>x.i
 $("#dc").innerHTML=`<div class="md"><div class="pi">${art(p,p.id)}</div><div class="mb"><h2 style="margin:0;font-size:36px">${p.n}</h2><b style="font-size:22px">${R(p.p)}</b><p style="margin:0">${p.d}</p><p class="note" style="margin:0">${p.comp}<br>Размер, упаковка: [уточнить]</p>
 <div><label for="cd">Текст открытки (необязательно)</label><textarea id="cd" rows="2" maxlength="200"></textarea></div><div><label for="qt">Количество</label><input id="qt" type="number" min="1" max="20" value="1"></div>
 <button class="btn" id="ad">Добавить в корзину</button><p class="note" style="margin:0">Доставка: условия см. в разделе «Доставка и оплата».</p><p class="note" style="margin:0">Похожие: ${sim.map(s=>`<a href="#" data-v="${s.id}">${s.n}</a>`).join(", ")}</p></div></div>`;
-$("#ad").onclick=()=>{add(id,Math.min(20,Math.max(1,+$("#qt").value||1)),$("#cd").value.trim());dg.close()};if(!dg.open)dg.showModal()}
+$("#ad").onclick=()=>{add(id,Math.min(20,Math.max(1,+$("#qt").value||1)),$("#cd").value.trim());dg.close()};if(!dg.open)dg.showModal();ym(113678024,'reachGoal','product_view')}
 dg.addEventListener("click",e=>{if(e.target==dg)dg.close()});
 let cart=[];try{cart=JSON.parse(localStorage.getItem("bt_cart")||"[]").filter(i=>PRODUCTS.some(p=>p.id==i.id))}catch(e){}
 const save=()=>{try{localStorage.setItem("bt_cart",JSON.stringify(cart))}catch(e){}};
 let tt;function toast(m){const t=$('#ts');t.textContent=m;t.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('on'),2200)}
-function add(id,q,card){const x=cart.find(i=>i.id==id&&i.card==card);x?x.q+=q:cart.push({id,q,card});save();cr();toast(`«${PRODUCTS.find(p=>p.id==id).n}» добавлен в корзину`);const b=$("#cn");b.classList.add("pop");setTimeout(()=>b.classList.remove("pop"),300)}
+function add(id,q,card){const x=cart.find(i=>i.id==id&&i.card==card);x?x.q+=q:cart.push({id,q,card});save();ym(113678024,'reachGoal','add_to_cart');cr();toast(`«${PRODUCTS.find(p=>p.id==id).n}» добавлен в корзину`);const b=$("#cn");b.classList.add("pop");setTimeout(()=>b.classList.remove("pop"),300)}
 const total=()=>cart.reduce((s,i)=>s+i.q*PRODUCTS.find(p=>p.id==i.id).p,0);
 function cr(){const n=cart.reduce((s,i)=>s+i.q,0);$("#cn").textContent=n;$("#cb").setAttribute("aria-label",`Открыть корзину, товаров: ${n}`);
 $("#ci").innerHTML=cart.length?cart.map((i,k)=>{const p=PRODUCTS.find(x=>x.id==i.id);return `<div class="it"><div class="th">${art(p,p.id)}</div><div><b>${p.n}</b>${i.card?`<br><span class="note">Открытка: ${i.card.replace(/</g,"&lt;")}</span>`:""}<div class="q"><button data-m="${k}" aria-label="Уменьшить">−</button>${i.q}<button data-p="${k}" aria-label="Увеличить">+</button></div></div><div><b>${R(p.p*i.q)}</b><br><button class="q" style="border:0;background:none;color:var(--mute);cursor:pointer" data-d="${k}">Удалить</button></div></div>`}).join("")+`<p style="font-size:18px"><b>Итого: ${R(total())}</b> <span class="note">(без доставки)</span></p>`:"<p>Корзина пуста.</p>";
@@ -224,9 +224,9 @@ async function sub(e){e.preventDefault();const v=i=>$("#"+i).value.trim(),F=[["n
 F.forEach(([i,er,m])=>{$("#"+er).textContent=m||"";$("#"+i).setAttribute("aria-invalid",!!m);if(m&&!first)first=i});
 const out=$("#rs2");if(first){$("#"+first).focus();out.innerHTML="";return}
 const order={customer:{name:v("nm1"),phone:v("ph"),address:v("ad1"),date:v("dt"),interval:v("iv"),comment:v("cm")},items:cart.map(i=>({id:i.id,name:PRODUCTS.find(p=>p.id==i.id).n,qty:i.q,card:i.card})),total:total()};
-const r=await sendOrder(order);
+ym(113678024,'reachGoal','checkout_submit');const r=await sendOrder(order);
 if(r.demo)out.innerHTML=`<div class="dm"><b>Демо-режим.</b> Заказ не отправлен и не оплачен: обработчик заказов не подключён. Корзина сохранена. Проверьте данные: ${order.customer.name.replace(/</g,"&lt;")}, ${order.customer.phone.replace(/</g,"&lt;")}, ${order.customer.date}, ${order.customer.interval}. Сумма: ${R(order.total)} + доставка.</div>`;
-else if(r.ok){cart=[];save();cr();$("#ci").innerHTML='<div class="dm"><b>Заказ отправлен.</b> Мы свяжемся с вами для подтверждения.</div>'}
+else if(r.ok){ym(113678024,'reachGoal','order_sent');window.dataLayer=window.dataLayer||[];dataLayer.push({ecommerce:{currencyCode:'RUB',purchase:{actionField:{id:'ORDER_'+Date.now(),revenue:order.total},products:order.items.map(i=>({id:String(i.id),name:i.name,quantity:i.qty}))}}});cart=[];save();cr();$("#ci").innerHTML='<div class="dm"><b>Заказ отправлен.</b> Мы свяжемся с вами для подтверждения.</div>'}
 else out.innerHTML='<div class="dm" style="color:#b3412f"><b>Не удалось отправить заказ.</b> Проверьте соединение и попробуйте ещё раз. Корзина сохранена.</div>'}
 $("#ci").addEventListener("click",e=>{const t=e.target;if(t.dataset.p!==undefined)cart[t.dataset.p].q=Math.min(20,cart[t.dataset.p].q+1);else if(t.dataset.m!==undefined){if(--cart[t.dataset.m].q<1)cart.splice(t.dataset.m,1)}else if(t.dataset.d!==undefined)cart.splice(t.dataset.d,1);else return;save();cr()});
 const dr=$("#dr"),ov=$("#ov"),tg=o=>{dr.classList.toggle("on",o);ov.classList.toggle("on",o);dr.setAttribute("aria-hidden",!o);if(o)$("#dcl").focus();else $("#cb").focus({preventScroll:true})};
