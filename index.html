@@ -3,11 +3,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>BOTANICA — цветочный магазин: авторские букеты</title>
 <meta name="description" content="BOTANICA — авторские и сезонные букеты, розы, тюльпаны, композиции в коробках. Выберите букет онлайн.">
-<meta property="og:title" content="BOTANICA — цветочный магазин"><meta property="og:description" content="Авторские и сезонные букеты. Цветы, которые говорят за вас."><meta name="theme-color" content="#F7F3EB">
+<meta property="og:title" content="BOTANICA — цветочный магазин"><meta property="og:description" content="Авторские и сезонные букеты. Цветы, которые говорят за вас."><meta name="theme-color" content="#05061c">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;700&display=swap">
+<script>document.documentElement.classList.add("ji")</script>
 <style>
-:root{--bg:#F7F3EB;--card:#fff;--soft:#DCE5D7;--green:#75866A;--dark:#353D32;--rose:#E8B9B5;--text:#30352E;--mute:#77796F;--line:#E5E2D9;--btn:#5f7055;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#22261f;--card:#2b3027;--soft:#3a4336;--dark:#eef0e8;--text:#e6e8df;--mute:#a9ad9f;--line:#3c4237;--btn:#8aa07d}}
+:root{color-scheme:dark;--bg:#05061c;--card:#10143a;--soft:#181d4a;--green:#6fe0bd;--dark:#f4f1ff;--rose:#ff8fdc;--text:#e7e5f6;--mute:#a9a7c9;--line:#ffffff24;--btn:#c42a8a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
 *,*::before,*::after{box-sizing:inherit}
 body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.6 Manrope,system-ui,sans-serif;overflow-x:hidden}
@@ -18,7 +18,6 @@ a{color:inherit}
 section{padding:56px 0}
 :focus-visible{outline:3px solid var(--green);outline-offset:2px}
 .btn{display:inline-block;border:1px solid var(--btn);background:var(--btn);color:#fff;padding:13px 24px;border-radius:999px;font:700 15px Manrope,sans-serif;cursor:pointer;text-decoration:none;transition:.2s;min-height:46px}
-:root:not([data-theme="light"]) .btn{color:#1d2119}
 .btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
 .btn.o{background:transparent;color:var(--dark)}
 .btn.sm{padding:9px 16px;min-height:40px;font-size:14px}
@@ -62,13 +61,10 @@ label{font-size:13px;font-weight:700;color:var(--mute);display:block;margin-bott
 .oc{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:0 0 10px;cursor:pointer;text-align:center;font:700 14px Manrope;color:var(--text);overflow:hidden}
 .oc div{aspect-ratio:1;margin-bottom:8px}.oc svg{width:100%;height:100%;display:block}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.adv{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.adv div,.box{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
-.adv i{font-style:normal;font-size:24px;color:var(--green)}.adv p{margin:6px 0 0;font-size:14px;color:var(--mute)}
+.box{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
 .dl{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.dl h3{font-size:22px;margin-bottom:6px}.dl p{margin:0;color:var(--mute);font-size:14px}
 .note{font-size:13px;color:var(--mute)}
-footer{background:var(--dark);color:#e9ebe3;padding:40px 0;font-size:14px}
-:root:not([data-theme="light"]) footer{background:#1a1d17}
+footer{background:#04051a;border-top:1px solid var(--line);color:#cfd0e6;padding:40px 0;font-size:14px}
 footer .w{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}footer a{display:block;margin:4px 0;color:#cfd5c8}
 dialog{border:1px solid var(--line);border-radius:20px;background:var(--bg);color:var(--text);padding:0;width:min(780px,94vw);max-height:92vh}
 dialog::backdrop{background:rgba(30,34,28,.5)}
@@ -81,11 +77,11 @@ dialog::backdrop{background:rgba(30,34,28,.5)}
 .it{display:grid;grid-template-columns:56px 1fr auto;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
 .it .th{width:56px;height:62px;border-radius:10px;overflow:hidden}.it .th svg{width:100%;height:100%}
 .q{display:inline-flex;align-items:center;gap:6px;margin-top:4px}.q button{width:32px;height:32px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--text);cursor:pointer}
-.er{color:#b3412f;font-size:13px;min-height:16px;margin:2px 0}
+.er{color:#ff8f84;font-size:13px;min-height:16px;margin:2px 0}
 .dm{background:var(--soft);color:var(--dark);border-radius:12px;padding:12px;font-size:14px;margin-top:10px}
 @media(max-width:900px){nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;padding:16px 20px;border-bottom:1px solid var(--line);gap:14px;font-size:17px}nav.on{display:flex}.bg{display:block;margin-left:auto}.cb{margin-left:0}
 .hero,.two,.md,footer .w{grid-template-columns:1fr}.hero{padding-top:16px}.himg{order:-1;aspect-ratio:1/1;border-radius:120px 120px 20px 20px}
-.cats,.grid{grid-template-columns:repeat(2,1fr);gap:12px}.adv,.dl{grid-template-columns:1fr 1fr}.occ{grid-template-columns:repeat(2,1fr)}.tools{grid-template-columns:1fr 1fr}.tools>:first-child{grid-column:1/-1}.md .pi{min-height:240px}section{padding:40px 0}.pb h3{font-size:20px}.pp{font-size:16px}}
+.cats,.grid{grid-template-columns:repeat(2,1fr);gap:12px}.dl{grid-template-columns:1fr 1fr}.occ{grid-template-columns:repeat(2,1fr)}.tools{grid-template-columns:1fr 1fr}.tools>:first-child{grid-column:1/-1}.md .pi{min-height:240px}section{padding:40px 0}.pb h3{font-size:20px}.pp{font-size:16px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}.pc{opacity:1;transform:none}}
 [hidden]{display:none!important}
 dialog[open]{animation:fd .3s ease}@keyframes fd{from{opacity:0;transform:translateY(12px)}}
@@ -93,38 +89,79 @@ dialog[open]::backdrop{animation:fb .3s}@keyframes fb{from{opacity:0}}
 .pi img,.cat img,.himg img{object-position:center 35%}
 #ts{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translate(-50%,30px);background:var(--dark);color:var(--bg);padding:12px 20px;border-radius:999px;font-size:14px;font-weight:700;z-index:60;opacity:0;pointer-events:none;transition:.3s;max-width:92vw;text-align:center}
 #ts.on{opacity:1;transform:translate(-50%,0)}
-input[aria-invalid=true],select[aria-invalid=true]{border-color:#b3412f}
+input[aria-invalid=true],select[aria-invalid=true]{border-color:#ff8f84}
 a:hover,.cb:hover,.oc:hover,.cat:hover{filter:brightness(1.03)}.oc{transition:.2s}.oc:hover{transform:translateY(-2px)}
 @media(max-width:380px){.ba{grid-template-columns:1fr}.w{padding:0 14px}.logo{font-size:22px}.hd{gap:8px}.cb{padding:9px 12px}}
 @media(min-width:1500px){.w{max-width:1320px}}
+.intro{position:relative;display:flex;align-items:center;min-height:560px;min-height:calc(100svh - 64px);background:#070820;color:#fff;overflow:hidden;isolation:isolate}
+#cv{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:0}
+.intro::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;opacity:0;transition:opacity 1.2s;background:linear-gradient(90deg,rgba(5,6,24,.8),rgba(5,6,24,.35) 48%,transparent 72%)}
 
-</style>
-
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=113678024', 'ym');
-
-    ym(113678024, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/113678024" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-
-
-</head><body>
+.go .intro::before{opacity:1}
+.intro .hero{position:relative;z-index:2;width:100%;grid-template-columns:1fr;padding:clamp(40px,9vh,110px) 20px}
+.intro .hx{max-width:560px}
+.intro h1{color:#fff;text-shadow:0 2px 24px #0009}.intro .hero p{color:#dcdaf0}.intro .facts{color:#c9c7e2}.intro .btn.o{color:#fff;border-color:rgba(255,255,255,.7)}.intro .btn.o:hover{background:#fff;color:#191919}
+.ji:not(.go) .hx{visibility:hidden}.ji .hx>*{opacity:0;transform:translateY(18px)}
+.ji.go .hx>*{opacity:1;transform:none;transition:opacity .9s ease,transform .9s ease}.ji.go .hx>:nth-child(2){transition-delay:.15s}.ji.go .hx>:nth-child(3){transition-delay:.3s}.ji.go .hx>:nth-child(4){transition-delay:.45s}
+.skipi{position:absolute;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:3;min-height:44px;padding:0 16px;border-radius:99px;border:1px solid rgba(255,255,255,.45);background:rgba(255,255,255,.12);color:#fff;font:700 13px Manrope,sans-serif;cursor:pointer}.idone .skipi{display:none}
+@media(max-width:860px){.intro{align-items:flex-end}.intro::before{background:linear-gradient(0deg,rgba(5,6,24,.85),rgba(5,6,24,.4) 55%,transparent 80%)}.intro .hero{padding-bottom:72px}}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(60% 40% at 88% 8%,rgba(40,200,190,.10),transparent),radial-gradient(55% 45% at 8% 92%,rgba(150,80,230,.12),transparent)}
+option{background:#10143a;color:#e7e5f6}
+/* Блок «Преимущества»: лавандовая подсветка, проигрывается один раз (см. скрипт внизу) */
+.advs{background:#101C36;padding:64px 0}
+.advw{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.5fr);gap:48px;align-items:center}
+.ae{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#aab6d6}
+.advl h2{font-size:clamp(30px,4vw,44px);margin:8px 0 14px;color:#eef0fb}
+.advl p{margin:0;color:#b4bdd8;max-width:340px}
+.advr{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr)}
+.ai{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;padding:24px 12px;font-size:14px;line-height:1.4}
+.ai b{color:#dde2f5;font-size:15px}.ai .t{color:#b4bdd8}
+.ai+.ai::after{content:"";position:absolute;left:0;top:18%;bottom:18%;width:1px;background:rgba(160,190,255,.25)}
+.ic{position:relative;z-index:1;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;margin-bottom:6px;font-size:22px;color:#dfe5fa}
+.ai::before{content:"";position:absolute;left:50%;top:50%;width:190px;aspect-ratio:1;border-radius:50%;opacity:0;pointer-events:none;transform:translate(-50%,-50%) rotate(-50deg);background:conic-gradient(transparent 0 8%,#B99AF7 38%,#D8C7F5 62%,transparent 92%);-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 2px),#000 calc(100% - 1.5px));mask:radial-gradient(farthest-side,transparent calc(100% - 2px),#000 calc(100% - 1.5px));filter:drop-shadow(0 0 7px rgba(185,154,247,.75))}
+.ai.on::before{animation:advr 1.5s ease-in-out}
+.ai.on .ic{animation:advi 1.5s ease-in-out}
+.ai.on b{animation:advb 1.5s ease-in-out}.ai.on .t{animation:advt 1.5s ease-in-out}
+@keyframes advr{0%{opacity:0;transform:translate(-50%,-50%) rotate(-50deg)}25%,75%{opacity:1}100%{opacity:0;transform:translate(-50%,-50%) rotate(10deg)}}
+@keyframes advi{0%,100%{background:transparent;box-shadow:none;color:#dfe5fa}35%,65%{background:rgba(185,154,247,.14);box-shadow:0 0 22px rgba(185,154,247,.35);color:#fff}}
+@keyframes advb{0%,100%{color:#dde2f5}40%,60%{color:#fff}}@keyframes advt{0%,100%{color:#b4bdd8}40%,60%{color:#e8e4ff}}
+@media(max-width:860px){.advw{grid-template-columns:1fr;gap:20px}.advr{grid-template-columns:1fr 1fr}.ai::before{width:150px}.ai:nth-child(3)::after{display:none}.ai:nth-child(n+3){border-top:1px solid rgba(160,190,255,.18)}}
+/* Блок «Категории»: светло-синий фон, плавно переходит в тёмную тему сайта сверху и снизу */
+#cats{--dark:#16224a;--text:#1d2a55;--mute:#4b5a86;--card:#fff;padding:96px 0;background:#cfdcf6}
+#cats h2{color:#16224a}
+#cats .cat span{background:rgba(255,255,255,.94);color:#16224a}
+/* Эффект «шторки»: первый экран остаётся на месте, следующие блоки наезжают на него снизу */
+.intro{position:sticky;top:64px;z-index:0}
+main>section:not(.intro){position:relative;z-index:2;background:var(--bg)}
+main>#cats{background:#cfdcf6}main>.advs{background:#1d3068}
+@media(max-height:600px){.intro{position:relative;top:0}}
+@media(prefers-reduced-motion:reduce){.intro{position:relative;top:0}}
+/* Каталог: насыщенный фиолетовый фон, отличается и от светло-синих «Категорий», и от тёмно-синих соседних блоков */
+main>#catalog{--card:#34276d;--soft:#43357f;--line:rgba(255,255,255,.2);--mute:#cbc4ec;--dark:#f6f3ff;background:#261a52}
+#catalog .pc{border-color:rgba(255,255,255,.14)}
+#catalog option{background:#34276d}
+/* «Подобрать по поводу»: глубокий бирюзовый, отличается от фиолетового каталога сверху и тёмного блока снизу */
+main>#occ{--card:#17525f;--line:rgba(255,255,255,.2);background:#0e3a46}
+#occ .oc{border-color:rgba(255,255,255,.16)}
+/* «О магазине»: тёплый сливовый, отличается от бирюзового блока сверху и синего «Преимущества» снизу */
+main>#about{--mute:#dcc6d9;--line:rgba(255,255,255,.2);background:#4a2046}
+/* «Доставка и оплата» и «Контакты»: один спокойный бежевый фон на оба блока */
+main>#delivery,main>#contacts{--dark:#2f3a2c;--text:#33372f;--mute:#6b695d;--card:#f8f3e8;--line:#d8cdb6;--btn:#5f7055;background:#eadfca}
+#delivery .btn,#contacts .btn{color:#fff}
+#delivery .btn.o,#contacts .btn.o{color:#2f3a2c;border-color:#5f7055}
+#delivery .btn.o:hover,#contacts .btn.o:hover{background:#5f7055;color:#fff}
+#delivery .box,#contacts .box{background:var(--card);border-color:var(--line)}
+main>#delivery,main>#contacts{color:var(--text)}
+#contacts p,#contacts b,#delivery p{color:var(--text)}#delivery .box p{color:var(--mute)}
+</style></head><body>
 <header><div class="w hd"><a class="logo" href="#top">BOTANIC<i>A</i></a>
 <nav id="nv" aria-label="Основная навигация"><a href="#catalog">Каталог</a><a href="#cats">Букеты</a><a href="#occ">Повод</a><a href="#delivery">Доставка и оплата</a><a href="#about">О магазине</a><a href="#contacts">Контакты</a></nav>
 <button class="cb" id="cb" aria-label="Открыть корзину">Корзина <b id="cn">0</b></button>
 <button class="bg" id="bg" aria-label="Меню" aria-expanded="false">☰</button></div></header>
 <main id="top">
-<div class="w hero"><div><h1>Цветы, которые говорят за вас</h1><p>Авторские букеты для важных встреч, тёплых слов и обычных дней, которые хочется сделать особенными.</p>
+<section class="intro" id="intro" aria-label="Главный экран"><canvas id="cv" aria-hidden="true"></canvas><div class="w hero"><div class="hx"><h1>Цветы, которые говорят за вас</h1><p>Авторские букеты для важных встреч, тёплых слов и обычных дней, которые хочется сделать особенными.</p>
 <div class="row"><a class="btn" href="#catalog">Выбрать букет</a><a class="btn o" href="#catalog" data-all>Смотреть каталог</a></div>
-<div class="facts"><span>Свежие цветы</span><span>Индивидуальная сборка</span><span>Доставка</span></div></div>
-<div class="himg" id="hi"></div></div>
+<div class="facts"><span>Свежие цветы</span><span>Индивидуальная сборка</span><span>Доставка</span></div></div></div><button class="skipi" type="button" id="skipi">Пропустить анимацию</button></section>
 <section id="cats"><div class="w"><h2>Категории</h2><div class="cats" id="cg"></div></div></section>
 <section id="catalog"><div class="w"><h2>Каталог букетов</h2>
 <div class="tools"><div><label for="s">Поиск по названию</label><input id="s" type="search" placeholder="Например, «Нежное утро»"></div>
@@ -134,20 +171,19 @@ a:hover,.cb:hover,.oc:hover,.cat:hover{filter:brightness(1.03)}.oc{transition:.2
 <div><label for="so">Сортировка</label><select id="so"><option value="pop">По популярности</option><option value="asc">Сначала дешевле</option><option value="desc">Сначала дороже</option></select></div></div>
 <p class="cnt"><span id="ct"></span><button class="btn o sm" id="rs">Сбросить фильтры</button></p>
 <div class="grid" id="gr"></div>
-<p class="note">Названия, составы и цены — демонстрационные, замените их данными магазина в массиве PRODUCTS внизу файла.</p></div></section>
+<!-- ЗАМЕНИТЬ ПЕРЕД ПУБЛИКАЦИЕЙ: названия, составы и цены товаров демонстрационные, они лежат в массиве PRODUCTS в скрипте внизу файла --></div></section>
 <section id="occ"><div class="w"><h2>Подобрать по поводу</h2><div class="occ" id="og"></div></div></section>
-<section id="about"><div class="w two"><div class="himg" style="aspect-ratio:1;border-radius:24px" id="ab"></div><div><h2>Собираем букеты с вниманием к деталям</h2><p>Для нас букет — это не просто сочетание цветов. Это настроение, которое вы хотите передать. Мы внимательно подбираем оттенки, фактуры и упаковку, чтобы каждая композиция выглядела гармонично.</p><p class="note">Здесь можно добавить реальные сведения о мастерской и команде.</p></div></div></section>
-<section><div class="w"><div class="adv"><div><i>✿</i><p><b>Свежие цветы</b><br>и аккуратная сборка</p></div><div><i>❦</i><p><b>Индивидуальный подход</b><br>к композиции</p></div><div><i>☰</i><p><b>Удобный заказ</b><br>онлайн</p></div><div><i>➳</i><p><b>Доставка</b><br>по согласованному адресу и времени</p></div></div></div></section>
+<section id="about"><div class="w two"><div class="himg" style="aspect-ratio:1;border-radius:24px" id="ab"></div><div><h2>Собираем букеты с вниманием к деталям</h2><p>Для нас букет — это не просто сочетание цветов. Это настроение, которое вы хотите передать. Мы внимательно подбираем оттенки, фактуры и упаковку, чтобы каждая композиция выглядела гармонично.</p></div></div></section>
+<section class="advs" id="advantages" aria-labelledby="adv-h"><div class="w advw"><div class="advl"><span class="ae">Преимущества</span><h2 id="adv-h">Красота в каждой детали</h2><p>Мы заботимся о том, чтобы ваши цветы были свежими, а эмоции — яркими.</p></div><ul class="advr"><li class="ai"><span class="ic" aria-hidden="true">✿</span><b>Свежие цветы</b><span class="t">и аккуратная сборка</span></li><li class="ai"><span class="ic" aria-hidden="true">❦</span><b>Индивидуальный подход</b><span class="t">к композиции</span></li><li class="ai"><span class="ic" aria-hidden="true">☰</span><b>Удобный заказ</b><span class="t">онлайн</span></li><li class="ai"><span class="ic" aria-hidden="true">➳</span><b>Доставка</b><span class="t">по согласованному адресу и времени</span></li></ul></div></section>
 <section id="delivery"><div class="w"><h2>Доставка и оплата</h2><div class="dl">
-<div class="box"><h3>Зоны и стоимость</h3><p>[Укажите зоны доставки и тарифы]</p></div><div class="box"><h3>Интервалы</h3><p>[Укажите доступные интервалы]</p></div><div class="box"><h3>Способы оплаты</h3><p>[Укажите способы оплаты]</p></div><div class="box"><h3>Самовывоз</h3><p>[Если предусмотрен — адрес и время]</p></div><div class="box"><h3>Открытка</h3><p>Текст открытки можно добавить в карточке букета.</p></div><div class="box"><h3>Если нужных цветов нет</h3><p>[Опишите правила замены, согласуемые с покупателем]</p></div></div>
+<div class="box"><h3>Зоны и стоимость</h3><p>Уточните у магазина.</p></div><div class="box"><h3>Интервалы</h3><p>Уточните у магазина.</p></div><div class="box"><h3>Способы оплаты</h3><p>Уточните у магазина.</p></div><div class="box"><h3>Самовывоз</h3><p>Уточните у магазина.</p></div><div class="box"><h3>Открытка</h3><p>Текст открытки можно добавить в карточке букета.</p></div><div class="box"><h3>Если нужных цветов нет</h3><p>Уточните у магазина.</p></div></div>
 <p><a class="btn" href="#contacts">Уточнить условия доставки</a></p></div></section>
-<section id="contacts"><div class="w two"><div><h2>Контакты</h2><p><b>Адрес:</b> [адрес магазина]<br><b>Телефон:</b> [телефон]<br><b>График:</b> [часы работы]<br><b>Мессенджеры и соцсети:</b> [ссылки]</p>
-<div class="row"><a class="btn" href="tel:" onclick="return nt(event)">Позвонить</a><a class="btn o" href="#contacts" onclick="return nt(event)">Построить маршрут</a></div>
-<p class="note" id="nm"></p></div><div class="box" style="min-height:220px;display:grid;place-items:center;text-align:center;color:var(--mute)">Здесь подключается карта (виджет Яндекс.Карт или 2ГИС)</div></div></section>
+<section id="contacts"><div class="w"><div><h2>Контакты</h2><div class="row"><a class="btn" href="tel:" onclick="return nt(event)">Позвонить</a><a class="btn o" href="#contacts" onclick="return nt(event)">Построить маршрут</a></div>
+<p class="note" id="nm"></p></div></div></section>
 </main>
 <footer><div class="w"><div><div class="logo" style="color:#fff">BOTANICA</div><p>Авторские и сезонные букеты. Цветы, которые говорят за вас.</p></div>
 <div><b>Разделы</b><a href="#catalog">Каталог</a><a href="#delivery">Доставка и оплата</a><a href="#contacts">Контакты</a></div>
-<div><b>Документы</b><a href="#top" onclick="return nt(event)">Политика конфиденциальности</a><a href="#top" onclick="return nt(event)">Обработка персональных данных</a><p class="note">Подставьте реквизиты и документы магазина.</p></div></div></footer>
+<div><b>Документы</b><a href="#top" onclick="return nt(event)">Политика конфиденциальности</a><a href="#top" onclick="return nt(event)">Обработка персональных данных</a><!-- ЗАМЕНИТЬ ПЕРЕД ПУБЛИКАЦИЕЙ: добавить реквизиты и документы магазина --></div></div></footer>
 <dialog id="dg"><button class="x" id="dx" aria-label="Закрыть">✕</button><div id="dc"></div></dialog>
 <div id="ov"></div>
 <div id="ts" role="status" aria-live="polite"></div>
@@ -177,7 +213,7 @@ if(p.k=="t")o+=`<path d="M${x-z*.8} ${y-z}Q${x-z} ${y+z} ${x} ${y+z}Q${x+z} ${y+
 else{for(let a=0;a<8;a++)o+=`<ellipse cx="${x}" cy="${y-z*.6}" rx="${z*.45}" ry="${z*.7}" fill="${c}" stroke="#0000000f" transform="rotate(${a*45} ${x} ${y})"/>`;o+=`<circle cx="${x}" cy="${y}" r="${z*.25}" fill="#F2D4A8"/>`}});
 return o+`<path d="M60 215L150 330 240 215 150 175Z" fill="#fff" opacity=".85"/><path d="M95 240L150 330 205 240 150 212Z" fill="#DCE5D7"/></svg>`}
 const bySeed=(id,i)=>art(PRODUCTS.find(x=>x.id==id),i);
-$("#hi").innerHTML=bySeed(6,3);$("#ab").innerHTML=bySeed(1,11);
+$("#ab").innerHTML=bySeed(1,11);
 $("#cg").innerHTML=CATS.map((c,i)=>`<button class="cat" data-c="${c[0]}">${art(PRODUCTS[i%8],i+20)}<span>${c[1]}</span></button>`).join("");
 $("#og").innerHTML=OCC.map((c,i)=>`<button class="oc" data-o="${c[0]}"><div>${art(PRODUCTS[(i+3)%8],i+40)}</div>${c[1]}</button>`).join("");
 $("#o").innerHTML='<option value="">Любой</option>'+OCC.map(c=>`<option value="${c[0]}">${c[1]}</option>`).join("");
@@ -196,15 +232,15 @@ if(t.dataset.o){cat="";$("#o").value=t.dataset.o;render();$("#catalog").scrollIn
 if(t.dataset.a)add(+t.dataset.a,1,"");if(t.dataset.v)openP(+t.dataset.v)});
 const dg=$("#dg");$("#dx").onclick=()=>dg.close();
 function openP(id){const p=PRODUCTS.find(x=>x.id==id),sim=PRODUCTS.filter(x=>x.id!=id&&x.f==p.f).concat(PRODUCTS.filter(x=>x.id!=id&&x.f!=p.f)).slice(0,3);
-$("#dc").innerHTML=`<div class="md"><div class="pi">${art(p,p.id)}</div><div class="mb"><h2 style="margin:0;font-size:36px">${p.n}</h2><b style="font-size:22px">${R(p.p)}</b><p style="margin:0">${p.d}</p><p class="note" style="margin:0">${p.comp}<br>Размер, упаковка: [уточнить]</p>
+$("#dc").innerHTML=`<div class="md"><div class="pi">${art(p,p.id)}</div><div class="mb"><h2 style="margin:0;font-size:36px">${p.n}</h2><b style="font-size:22px">${R(p.p)}</b><p style="margin:0">${p.d}</p>
 <div><label for="cd">Текст открытки (необязательно)</label><textarea id="cd" rows="2" maxlength="200"></textarea></div><div><label for="qt">Количество</label><input id="qt" type="number" min="1" max="20" value="1"></div>
 <button class="btn" id="ad">Добавить в корзину</button><p class="note" style="margin:0">Доставка: условия см. в разделе «Доставка и оплата».</p><p class="note" style="margin:0">Похожие: ${sim.map(s=>`<a href="#" data-v="${s.id}">${s.n}</a>`).join(", ")}</p></div></div>`;
-$("#ad").onclick=()=>{add(id,Math.min(20,Math.max(1,+$("#qt").value||1)),$("#cd").value.trim());dg.close()};if(!dg.open)dg.showModal();ym(113678024,'reachGoal','product_view')}
+$("#ad").onclick=()=>{add(id,Math.min(20,Math.max(1,+$("#qt").value||1)),$("#cd").value.trim());dg.close()};if(!dg.open)dg.showModal()}
 dg.addEventListener("click",e=>{if(e.target==dg)dg.close()});
 let cart=[];try{cart=JSON.parse(localStorage.getItem("bt_cart")||"[]").filter(i=>PRODUCTS.some(p=>p.id==i.id))}catch(e){}
 const save=()=>{try{localStorage.setItem("bt_cart",JSON.stringify(cart))}catch(e){}};
 let tt;function toast(m){const t=$('#ts');t.textContent=m;t.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('on'),2200)}
-function add(id,q,card){const x=cart.find(i=>i.id==id&&i.card==card);x?x.q+=q:cart.push({id,q,card});save();ym(113678024,'reachGoal','add_to_cart');cr();toast(`«${PRODUCTS.find(p=>p.id==id).n}» добавлен в корзину`);const b=$("#cn");b.classList.add("pop");setTimeout(()=>b.classList.remove("pop"),300)}
+function add(id,q,card){const x=cart.find(i=>i.id==id&&i.card==card);x?x.q+=q:cart.push({id,q,card});save();cr();toast(`«${PRODUCTS.find(p=>p.id==id).n}» добавлен в корзину`);const b=$("#cn");b.classList.add("pop");setTimeout(()=>b.classList.remove("pop"),300)}
 const total=()=>cart.reduce((s,i)=>s+i.q*PRODUCTS.find(p=>p.id==i.id).p,0);
 function cr(){const n=cart.reduce((s,i)=>s+i.q,0);$("#cn").textContent=n;$("#cb").setAttribute("aria-label",`Открыть корзину, товаров: ${n}`);
 $("#ci").innerHTML=cart.length?cart.map((i,k)=>{const p=PRODUCTS.find(x=>x.id==i.id);return `<div class="it"><div class="th">${art(p,p.id)}</div><div><b>${p.n}</b>${i.card?`<br><span class="note">Открытка: ${i.card.replace(/</g,"&lt;")}</span>`:""}<div class="q"><button data-m="${k}" aria-label="Уменьшить">−</button>${i.q}<button data-p="${k}" aria-label="Увеличить">+</button></div></div><div><b>${R(p.p*i.q)}</b><br><button class="q" style="border:0;background:none;color:var(--mute);cursor:pointer" data-d="${k}">Удалить</button></div></div>`}).join("")+`<p style="font-size:18px"><b>Итого: ${R(total())}</b> <span class="note">(без доставки)</span></p>`:"<p>Корзина пуста.</p>";
@@ -224,10 +260,10 @@ async function sub(e){e.preventDefault();const v=i=>$("#"+i).value.trim(),F=[["n
 F.forEach(([i,er,m])=>{$("#"+er).textContent=m||"";$("#"+i).setAttribute("aria-invalid",!!m);if(m&&!first)first=i});
 const out=$("#rs2");if(first){$("#"+first).focus();out.innerHTML="";return}
 const order={customer:{name:v("nm1"),phone:v("ph"),address:v("ad1"),date:v("dt"),interval:v("iv"),comment:v("cm")},items:cart.map(i=>({id:i.id,name:PRODUCTS.find(p=>p.id==i.id).n,qty:i.q,card:i.card})),total:total()};
-ym(113678024,'reachGoal','checkout_submit');const r=await sendOrder(order);
+const r=await sendOrder(order);
 if(r.demo)out.innerHTML=`<div class="dm"><b>Демо-режим.</b> Заказ не отправлен и не оплачен: обработчик заказов не подключён. Корзина сохранена. Проверьте данные: ${order.customer.name.replace(/</g,"&lt;")}, ${order.customer.phone.replace(/</g,"&lt;")}, ${order.customer.date}, ${order.customer.interval}. Сумма: ${R(order.total)} + доставка.</div>`;
-else if(r.ok){ym(113678024,'reachGoal','order_sent');window.dataLayer=window.dataLayer||[];dataLayer.push({ecommerce:{currencyCode:'RUB',purchase:{actionField:{id:'ORDER_'+Date.now(),revenue:order.total},products:order.items.map(i=>({id:String(i.id),name:i.name,quantity:i.qty}))}}});cart=[];save();cr();$("#ci").innerHTML='<div class="dm"><b>Заказ отправлен.</b> Мы свяжемся с вами для подтверждения.</div>'}
-else out.innerHTML='<div class="dm" style="color:#b3412f"><b>Не удалось отправить заказ.</b> Проверьте соединение и попробуйте ещё раз. Корзина сохранена.</div>'}
+else if(r.ok){cart=[];save();cr();$("#ci").innerHTML='<div class="dm"><b>Заказ отправлен.</b> Мы свяжемся с вами для подтверждения.</div>'}
+else out.innerHTML='<div class="dm" style="color:#ff8f84"><b>Не удалось отправить заказ.</b> Проверьте соединение и попробуйте ещё раз. Корзина сохранена.</div>'}
 $("#ci").addEventListener("click",e=>{const t=e.target;if(t.dataset.p!==undefined)cart[t.dataset.p].q=Math.min(20,cart[t.dataset.p].q+1);else if(t.dataset.m!==undefined){if(--cart[t.dataset.m].q<1)cart.splice(t.dataset.m,1)}else if(t.dataset.d!==undefined)cart.splice(t.dataset.d,1);else return;save();cr()});
 const dr=$("#dr"),ov=$("#ov"),tg=o=>{dr.classList.toggle("on",o);ov.classList.toggle("on",o);dr.setAttribute("aria-hidden",!o);if(o)$("#dcl").focus();else $("#cb").focus({preventScroll:true})};
 $("#cb").onclick=()=>tg(true);$("#dcl").onclick=ov.onclick=()=>tg(false);
@@ -236,4 +272,142 @@ $("#bg").onclick=()=>{const o=$("#nv").classList.toggle("on");$("#bg").setAttrib
 $("#nv").onclick=()=>{$("#nv").classList.remove("on")};
 function nt(e){e.preventDefault();$("#nm").textContent="Заполните телефон, адрес и документы в коде страницы — ссылка пока не подключена.";return false}
 render();cr();
-</script></body></html>
+</script><script>
+(function(){
+var sec=document.getElementById('intro'),cv=document.getElementById('cv'),root=document.documentElement,skip=document.getElementById('skipi');
+if(!sec||!cv||!cv.getContext){root.classList.add('go','idone');return}
+var ctx=cv.getContext('2d'),W=0,H=0,DPR=1,T=0,DT=0,off=0,last=null,running=false,vis=true,shown=false,mob=false,gy=0,FH=300,rt,i,k;
+var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches,TAU=6.2832,CAM=.55,SC=Math.sin(CAM),CC=Math.cos(CAM);
+function cl(x){return x<0?0:x>1?1:x}function ea(x){x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2}function lp(a,b,q){return a+(b-a)*q}
+function rn(s){return function(){s=s*16807%2147483647;return s/2147483647}}
+function hs(a,b){var x=Math.sin(a*127.1+b*311.7)*43758.5453;return x-Math.floor(x)}
+function sprite(rgb){var c=document.createElement('canvas');c.width=c.height=64;var g=c.getContext('2d'),r=g.createRadialGradient(32,32,0,32,32,32);r.addColorStop(0,'rgba('+rgb+',1)');r.addColorStop(.35,'rgba('+rgb+',.4)');r.addColorStop(1,'rgba('+rgb+',0)');g.fillStyle=r;g.fillRect(0,0,64,64);return c}
+var R=rn(5),sp=[sprite('255,150,190'),sprite('255,215,160')],bok=[],crumbs=[],soil=[],pol=[];
+for(i=0;i<18;i++)bok.push({x:R(),y:R(),r:12+R()*40,v:.004+R()*.01,a:.06+R()*.14,k:R()<.55?0:1,ph:R()*6.28});
+for(i=0;i<170;i++){var cx0=(R()*2-1);crumbs.push({x:cx0,y:R()*Math.sqrt(1-cx0*cx0),r:.8+R()*2.4,c:R()<.25?'#6a4654':R()<.5?'#2a1820':'#1a0d14'})}
+for(i=0;i<22;i++)soil.push({t0:.95+R()*.5,vx:(R()*2-1)*110,vy:-(70+R()*150),r:1.4+R()*2.4});
+var BG=null,FOL=null,stars=[],R2=[],mist=sprite('205,175,235');
+for(i=0;i<80;i++)stars.push({x:R(),y:R()*.6,r:.5+R()*1.1,ph:R()*6.28,a:.15+R()*.4});
+for(i=0;i<16;i++)R2.push(R());
+function blob(x,cx,cy,L,Wd,ang,c0,c1){x.save();x.translate(cx,cy);x.rotate(ang);var g=x.createLinearGradient(0,0,0,-L);g.addColorStop(0,c0);g.addColorStop(1,c1);x.fillStyle=g;x.beginPath();x.moveTo(0,0);x.quadraticCurveTo(Wd,-L*.5,0,-L);x.quadraticCurveTo(-Wd,-L*.5,0,0);x.fill();x.restore()}
+function build(){
+var Wl=Math.round(W*1.6),c=document.createElement('canvas'),x,r=rn(21),u=Math.max(.7,FH/400),q,ly;
+c.width=Wl*DPR;c.height=H*DPR;x=c.getContext('2d');x.scale(DPR,DPR);
+function hill(base,amp,c0,c1,bl,ph){x.save();try{x.filter=bl?'blur('+bl+'px)':'none'}catch(e){}var g=x.createLinearGradient(0,base-amp*2,0,gy+10);g.addColorStop(0,c0);g.addColorStop(1,c1);x.fillStyle=g;x.beginPath();x.moveTo(0,gy+10);for(var n=0;n<=60;n++){var v=n/60;x.lineTo(v*Wl,base-amp*(Math.sin(v*5+ph)*.6+Math.sin(v*11+ph*2)*.25+.5))}x.lineTo(Wl,gy+10);x.closePath();x.fill();x.restore()}
+hill(gy-FH*.3,FH*.16,'#2d1a46','#150b27',5,1);hill(gy-FH*.16,FH*.1,'#1f1233','#0d0819',2,3.2);
+x.lineCap='round';
+for(ly=0;ly<2;ly++)for(q=0;q<210;q++){var bx=r()*Wl,bh=(18+r()*(ly?46:70))*u,bd=(r()-.5)*bh*.6;x.strokeStyle=ly?'rgba(14,8,26,.95)':'rgba(40,26,66,.9)';x.lineWidth=(1+r()*1.8)*Math.max(.7,u);x.beginPath();x.moveTo(bx,gy+6);x.quadraticCurveTo(bx+bd*.3,gy-bh*.6,bx+bd,gy-bh);x.stroke();
+if(!ly&&r()<.09){x.fillStyle=r()<.5?'rgba(255,190,215,.75)':'rgba(255,228,205,.7)';x.beginPath();x.arc(bx+bd,gy-bh,1.4+r()*1.8,0,TAU);x.fill()}}
+BG=c;
+var f=document.createElement('canvas');f.width=W*DPR;f.height=H*DPR;x=f.getContext('2d');x.scale(DPR,DPR);try{x.filter='blur(9px)'}catch(e){}
+var cs=[['rgba(36,80,70,.7)','rgba(20,40,48,.0)'],['rgba(70,28,84,.65)','rgba(30,14,48,0)'],['rgba(24,54,60,.7)','rgba(14,26,40,0)']];
+for(q=0;q<9;q++){var cc=cs[q%3],L=H*(.22+r()*.3),an=.25+r()*1.1;blob(x,-W*.02,-H*.03,L,L*.22,Math.PI-an,cc[0],cc[1]);blob(x,W*1.02,-H*.03,L,L*.22,-(Math.PI-an),cc[0],cc[1])}
+FOL=f}
+function fgBlades(t){ctx.lineCap='round';for(var sd=0;sd<2;sd++)for(var n=0;n<16;n++){var bx=sd?W-(n*W*.012+R2[n]*8):n*W*.012+R2[n]*8,bh=H*(.14+.2*Math.max(0,1-n/16))*(.6+R2[n]*.6),sw=Math.sin(t*.9+n*.7+sd)*bh*.08,dr=sd?-1:1;ctx.strokeStyle='rgba(8,5,16,.96)';ctx.lineWidth=2+R2[n]*2.5;ctx.beginPath();ctx.moveTo(bx,H+4);ctx.quadraticCurveTo(bx+dr*bh*.1+sw*.5,H-bh*.55,bx+dr*bh*.28+sw,H-bh);ctx.stroke()}}
+var RN=[7,6,5,4,3],RL=[1,.86,.7,.55,.4],RW=[.62,.58,.54,.5,.46],RT=[1.4,1.08,.8,.55,.3];
+var RC=[['#7d0e3a','#e0457a','#ffb4cb'],['#6a0b33','#d23a72','#ff9fbf'],['#5a0a2e','#c32f68','#ff8fb6'],['#4a0826','#b02560','#f77aa8'],['#3d0620','#9c1f55','#ee6a9c']],PET=[];
+RN.forEach(function(n,ri){for(var j=0;j<n;j++)PET.push({ri:ri,ph:(j/n+ri*.19)*TAU+hs(ri,j)*.4,v:hs(j,ri)})});
+function petal(L,Wd,c){
+ctx.beginPath();ctx.moveTo(0,0);ctx.bezierCurveTo(-Wd,-L*.15,-Wd*1.05,-L*.75,-Wd*.5,-L*.95);ctx.bezierCurveTo(-Wd*.25,-L*1.05,Wd*.25,-L*1.05,Wd*.5,-L*.95);ctx.bezierCurveTo(Wd*1.05,-L*.75,Wd,-L*.15,0,0);ctx.closePath();
+var g=ctx.createLinearGradient(0,0,0,-L);g.addColorStop(0,c[0]);g.addColorStop(.45,c[1]);g.addColorStop(1,c[2]);ctx.fillStyle=g;ctx.fill();
+ctx.save();ctx.clip();ctx.strokeStyle='rgba(60,0,30,.2)';ctx.lineWidth=.8;
+for(var v=-1;v<=1;v++){ctx.beginPath();ctx.moveTo(0,0);ctx.quadraticCurveTo(v*Wd*.35,-L*.5,v*Wd*.5,-L*.92);ctx.stroke()}
+var h=ctx.createRadialGradient(0,-L*.85,0,0,-L*.85,L*.5);h.addColorStop(0,'rgba(255,235,240,.28)');h.addColorStop(1,'rgba(255,235,240,0)');ctx.fillStyle=h;ctx.fillRect(-Wd*1.2,-L*1.1,Wd*2.4,L*1.2);ctx.restore();
+ctx.strokeStyle='rgba(255,225,235,.32)';ctx.lineWidth=1;ctx.stroke()}
+function leaf(L,Wd,dk,lt){
+var n=14,j,u,w;ctx.beginPath();ctx.moveTo(0,0);
+for(j=1;j<=n;j++){u=j/n;w=Wd*Math.pow(Math.sin(Math.PI*Math.min(1,u*1.02)),.75)*(1-.2*u)*(1+.05*((j%2)?1:-1));ctx.lineTo(-w,-L*u)}
+for(j=n;j>=1;j--){u=j/n;w=Wd*Math.pow(Math.sin(Math.PI*Math.min(1,u*1.02)),.75)*(1-.2*u)*(1+.05*((j%2)?-1:1));ctx.lineTo(w,-L*u)}
+ctx.closePath();var g=ctx.createLinearGradient(-Wd,0,Wd,-L);g.addColorStop(0,dk);g.addColorStop(1,lt);ctx.fillStyle=g;ctx.fill();
+ctx.strokeStyle='rgba(190,235,170,.45)';ctx.lineWidth=1;ctx.stroke();
+ctx.strokeStyle='rgba(200,240,180,.4)';ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(0,-L*.96);ctx.stroke();
+ctx.strokeStyle='rgba(200,240,180,.22)';for(j=1;j<6;j++){u=j/6.5;ctx.beginPath();ctx.moveTo(0,-L*u);ctx.lineTo(-Wd*.7*Math.sin(Math.PI*u),-L*(u+.1));ctx.moveTo(0,-L*u);ctx.lineTo(Wd*.7*Math.sin(Math.PI*u),-L*(u+.1));ctx.stroke()}}
+function sx(u,t){return Math.sin(u*2.5)*FH*.035+Math.sin(t*.9+u*2)*FH*.008*u}
+var LV=[[.16,1,.2],[.3,-1,.24],[.46,1,.22],[.6,-1,.19],[.74,1,.15]];
+function head(R0,op,t){
+ctx.save();var gl=ctx.createRadialGradient(0,0,0,0,0,R0*3.4);ctx.globalCompositeOperation='lighter';gl.addColorStop(0,'rgba(255,80,130,'+(.1+.34*op)+')');gl.addColorStop(1,'rgba(255,80,130,0)');ctx.fillStyle=gl;ctx.beginPath();ctx.arc(0,0,R0*3.4,0,TAU);ctx.fill();ctx.globalCompositeOperation='source-over';
+ctx.fillStyle='#3d7a46';ctx.beginPath();ctx.ellipse(0,R0*.08,R0*.2,R0*.15,0,0,TAU);ctx.fill();
+for(k=0;k<5;k++){var ph=k/5*TAU+.3,th=lp(.3,1.9,op),dx=Math.sin(th)*Math.sin(ph),dz=Math.sin(th)*Math.cos(ph),dy=Math.cos(th),sy=dy*CC-dz*SC,an=Math.atan2(dx,sy),L=R0*.8;
+ctx.save();ctx.rotate(an);ctx.beginPath();ctx.moveTo(0,0);ctx.quadraticCurveTo(-L*.2,-L*.5,0,-L);ctx.quadraticCurveTo(L*.2,-L*.5,0,0);var sg=ctx.createLinearGradient(0,0,0,-L);sg.addColorStop(0,'#24532f');sg.addColorStop(1,'#5f9d55');ctx.fillStyle=sg;ctx.fill();ctx.restore()}
+var cur=-1,lst=[];
+for(k=0;k<PET.length;k++){var p=PET[k],th2=RT[p.ri]*op*(.85+.3*p.v)+.05,ph2=p.ph+t*.03;lst.push({p:p,x:Math.sin(th2)*Math.sin(ph2),z:Math.sin(th2)*Math.cos(ph2),y:Math.cos(th2)})}
+lst.sort(function(a,b){return a.p.ri-b.p.ri||a.z-b.z});
+for(k=0;k<lst.length;k++){var e=lst[k],sy2=e.y*CC-e.z*SC,ln=Math.sqrt(e.x*e.x+sy2*sy2),ri=e.p.ri;
+ctx.save();ctx.rotate(Math.atan2(e.x,sy2));petal(R0*RL[ri]*(.55+.45*op)*(.62+.38*Math.min(1,ln*1.3)),R0*RW[ri]*(.75+.25*op),RC[ri]);ctx.restore()}
+ctx.restore()}
+function draw(){
+var t=T+off,mv=ea((t-6.4)/2.2),fx=lp(W*.5,mob?W*.5:W*.74,mv),s=lp(1,mob?.8:.68,mv),g,j,b,u;
+ctx.setTransform(DPR,0,0,DPR,0,0);ctx.globalAlpha=1;ctx.globalCompositeOperation='source-over';
+var op=ea((t-4.3)/2.3),g1=ea((t-.9)/3.4);
+g=ctx.createRadialGradient(fx,gy-FH*.45,0,fx,gy-FH*.45,Math.max(W,H)*.85);g.addColorStop(0,'#2c1034');g.addColorStop(.4,'#150b2b');g.addColorStop(1,'#04051a');ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+ctx.globalCompositeOperation='lighter';
+g=ctx.createRadialGradient(W*.2,H*.2,0,W*.2,H*.2,Math.min(W,H)*.3);g.addColorStop(0,'rgba(255,205,230,'+(.2*cl(t/2))+')');g.addColorStop(1,'rgba(255,205,230,0)');ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+ctx.fillStyle='#fff';for(k=0;k<stars.length;k++){var st=stars[k];ctx.globalAlpha=st.a*cl(t/2)*(.6+.4*Math.sin(t*1.3+st.ph));ctx.fillRect(st.x*W,st.y*H,st.r,st.r)}
+ctx.globalAlpha=1;ctx.globalCompositeOperation='source-over';
+if(BG)ctx.drawImage(BG,-W*.3+(W*.5-fx)*.45,0,W*1.6,H);
+ctx.globalCompositeOperation='lighter';
+for(k=0;k<3;k++){ctx.globalAlpha=.09*cl(t/2);var mxp=((t*(6+k*4)+k*W*.4)%(W*1.4))-W*.3;ctx.drawImage(mist,mxp-W*.3,gy-FH*(.06+.08*k)-FH*.1,W*.9,FH*.22)}
+ctx.globalAlpha=1;ctx.globalCompositeOperation='source-over';
+if(FOL)ctx.drawImage(FOL,0,0,W,H);
+ctx.globalCompositeOperation='lighter';
+for(k=0;k<bok.length;k++){b=bok[k];var by=(((b.y-t*b.v)%1)+1)%1,bx=b.x+Math.sin(t*.3+b.ph)*.02;ctx.globalAlpha=b.a*cl(t/1.5);ctx.drawImage(sp[b.k],bx*W-b.r,by*H-b.r,b.r*2,b.r*2)}
+if(op>0){ctx.globalAlpha=.07*op;g=ctx.createLinearGradient(0,0,0,gy);g.addColorStop(0,'rgba(255,200,225,0)');g.addColorStop(1,'rgba(255,200,225,1)');ctx.fillStyle=g;var hx=fx+sx(1,t)*s;ctx.beginPath();ctx.moveTo(hx-W*.03,0);ctx.lineTo(hx+W*.03,0);ctx.lineTo(fx+FH*.6*s,gy);ctx.lineTo(fx-FH*.6*s,gy);ctx.fill()}
+ctx.globalAlpha=1;ctx.globalCompositeOperation='source-over';
+ctx.save();ctx.translate(fx,gy);ctx.scale(s,s);
+g=ctx.createLinearGradient(0,0,0,H*.5);g.addColorStop(0,'#2a1522');g.addColorStop(1,'#08060f');ctx.fillStyle=g;ctx.fillRect(-W*4,0,W*8,H);
+ctx.fillStyle='rgba(255,160,195,.14)';ctx.fillRect(-W*4,-1,W*8,2);
+if(op>0){ctx.globalCompositeOperation='lighter';g=ctx.createRadialGradient(0,0,0,0,0,FH*.7);g.addColorStop(0,'rgba(255,90,140,'+(.2*op)+')');g.addColorStop(1,'rgba(255,90,140,0)');ctx.fillStyle=g;ctx.save();ctx.scale(1,.25);ctx.beginPath();ctx.arc(0,0,FH*.7,0,TAU);ctx.fill();ctx.restore();ctx.globalCompositeOperation='source-over'}
+var m=ea((t-.2)/.9),mx=FH*.34,my=FH*.075*(.3+.7*m);
+if(m>0){ctx.globalAlpha=m;g=ctx.createRadialGradient(0,-my*.4,0,0,0,mx);g.addColorStop(0,'#432835');g.addColorStop(1,'#140a10');ctx.fillStyle=g;ctx.beginPath();ctx.ellipse(0,0,mx,my,0,Math.PI,TAU);ctx.fill();
+for(k=0;k<crumbs.length;k++){var cr=crumbs[k];ctx.fillStyle=cr.c;ctx.beginPath();ctx.arc(cr.x*mx,-cr.y*my,cr.r,0,TAU);ctx.fill()}ctx.globalAlpha=1}
+for(k=0;k<soil.length;k++){var so=soil[k],q=t-so.t0;if(q>0&&q<1.2){ctx.globalAlpha=1-q/1.2;ctx.fillStyle='#4a2f3a';ctx.beginPath();ctx.arc(so.vx*q*.6,-FH*.02+so.vy*q*.5+260*q*q,so.r,0,TAU);ctx.fill()}}
+ctx.globalAlpha=1;
+if(g1>.003){
+var N=44,mm=Math.max(2,Math.ceil(N*g1)),pts=[];for(j=0;j<=mm;j++){u=g1*j/mm;pts.push([sx(u,t),-u*FH,u])}
+var ca=ea((t-1.3)/.9);
+if(ca>0)for(k=-1;k<=1;k+=2){ctx.save();ctx.translate(sx(.03,t),-.03*FH);ctx.rotate(k*(1.25+Math.sin(t+k)*.03));leaf(FH*.075*ca,FH*.03*ca,'#2f6a3e','#8fc47a');ctx.restore()}
+ctx.lineCap='round';
+for(j=1;j<pts.length;j++){var a=pts[j-1],c2=pts[j],w=FH*(.026-.013*c2[2]);ctx.strokeStyle='#2a4d34';ctx.lineWidth=w;ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(c2[0],c2[1]);ctx.stroke();
+ctx.strokeStyle='rgba(150,205,120,.6)';ctx.lineWidth=w*.3;ctx.beginPath();ctx.moveTo(a[0]-w*.2,a[1]);ctx.lineTo(c2[0]-w*.2,c2[1]);ctx.stroke();
+if(j%6===3&&c2[2]>.08){var sd=(j%12===3)?1:-1;ctx.fillStyle='#7a2a34';ctx.beginPath();ctx.moveTo(c2[0]+sd*w*.4,c2[1]);ctx.lineTo(c2[0]+sd*w*1.5,c2[1]-w*.9);ctx.lineTo(c2[0]+sd*w*.4,c2[1]-w*.9);ctx.fill()}}
+for(k=0;k<LV.length;k++){var lf=LV[k],ls=ea((g1-lf[0])/.1);if(ls<=0)continue;
+ctx.save();ctx.translate(sx(lf[0],t),-lf[0]*FH);ctx.rotate(lf[1]*lp(.2,1.1,ls)+Math.sin(t*1.2+k*2)*.025);leaf(FH*lf[2]*lp(.25,1,ls),FH*lf[2]*.42*lp(.25,1,ls),'#1d4129','#5a9650');ctx.restore()}
+var hb=ea((g1-.88)/.12);
+if(hb>0){var tip=pts[pts.length-1];ctx.save();ctx.translate(tip[0],tip[1]);ctx.rotate(Math.sin(t*.7)*.025+.05);head(FH*.17*lp(.4,1,hb)*(1+.03*op),op,t);ctx.restore();
+if(op>.4&&pol.length<60&&R()<.5)pol.push({x:tip[0]+(R()-.5)*FH*.18,y:tip[1]-FH*.1*R(),vx:(R()-.5)*14,vy:-8-R()*22,l:1})}}
+ctx.globalCompositeOperation='lighter';
+for(k=pol.length-1;k>=0;k--){var pp=pol[k];pp.l-=DT/2.6;if(pp.l<=0){pol.splice(k,1);continue}pp.x+=pp.vx*DT;pp.y+=pp.vy*DT;ctx.globalAlpha=pp.l*.8;ctx.drawImage(sp[1],pp.x-5,pp.y-5,10,10)}
+ctx.restore();
+ctx.globalAlpha=1;ctx.globalCompositeOperation='source-over';
+if(t>.8)fgBlades(t);
+g=ctx.createRadialGradient(W/2,H/2,Math.min(W,H)*.45,W/2,H/2,Math.max(W,H)*.8);g.addColorStop(0,'rgba(0,0,0,0)');g.addColorStop(1,'rgba(0,0,10,.55)');ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+if(t<.9){ctx.fillStyle='rgba(0,0,0,'+(1-t/.9)+')';ctx.fillRect(0,0,W,H)}
+if(t>=6.6&&!shown){shown=true;root.classList.add('go')}
+if(t>=8.8)root.classList.add('idone')}
+function fail(){running=false;root.classList.add('go','idone')}
+function loop(ts){if(!vis||document.hidden){running=false;last=null;return}
+if(last===null)last=ts;DT=Math.min(.05,(ts-last)/1000);last=ts;T+=DT;
+try{draw()}catch(e){fail();return}
+requestAnimationFrame(loop)}
+function start(){if(!running&&!reduce){running=true;requestAnimationFrame(loop)}}
+function resize(){var b=sec.getBoundingClientRect();W=Math.round(b.width)||360;H=Math.round(b.height)||640;DPR=Math.min(window.devicePixelRatio||1,W<700?1.5:2);mob=W<860;
+gy=H*(mob?.66:.8);FH=mob?Math.min(H*.36,W*.78):Math.min(H*.56,W*.42);cv.width=W*DPR;cv.height=H*DPR;try{build();draw()}catch(e){fail()}}
+window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(resize,150)});
+document.addEventListener('visibilitychange',function(){if(!document.hidden)start()});
+if(window.IntersectionObserver)new IntersectionObserver(function(e){vis=e[0].isIntersecting;if(vis)start()}).observe(sec);
+skip.addEventListener('click',function(){off+=Math.max(0,8.8-(T+off));if(!running)draw()});
+if(reduce)off=9;
+resize();start();
+setTimeout(function(){root.classList.add('go')},10000);
+})();
+</script>
+<script>
+/* Подсветка преимуществ: один проход при первом появлении блока на экране, повторно не запускается */
+(function(){var s=document.getElementById('advantages');if(!s||!window.IntersectionObserver)return;
+if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var items=s.querySelectorAll('.ai'),played=false;
+var io=new IntersectionObserver(function(e){if(played||!e[0].isIntersecting)return;played=true;io.disconnect();s.dataset.played='1';
+items.forEach(function(el,i){setTimeout(function(){el.classList.add('on')},i*1250);setTimeout(function(){el.classList.remove('on')},i*1250+1600)})},{threshold:.4});
+io.observe(s)})();
+</script>
+</body></html>
